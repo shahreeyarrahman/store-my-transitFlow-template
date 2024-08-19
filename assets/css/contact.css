@@ -1,0 +1,563 @@
+/* Font link here  */
+
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* variabls */
+:root {
+  /* color  */
+  --common-white: #ffffff;
+  --common-black: #000000;
+  --primary-color-1: #ffbe34;
+  --primary-color-2: #091242;
+  --secondary-2: #f4f4f4;
+  --secondary-navy: rgba(9, 18, 66, 1);
+  --Heading-Font-color: #1c1f35;
+  --Paragraph-Font-color: #666c89;
+  --Gradiant-color: #ffb629, #ffda56, #ffd7a6;
+  --icon-bg-color: #273270;
+  --icon-border: 1px solid #4a57a1;
+  --shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+
+  /* font size  */
+  --heading-font-size-1: clamp(50px, 4vw, 65px);
+  --heading-font-size-2: clamp(20px, 4vw, 65px);
+  --heading-font-size-3: clamp(15px, 3vw, 50px);
+  --paragraph-font-size: clamp(10px, 2vw, 16px);
+  --semibold: 500;
+  --bold: 700;
+
+  /* font family  */
+  --primary-font-Rubik: "Rubik", sans-serif;
+  --secondary-font-Krub: "Krub", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* start hero section  */
+#hero {
+  
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-family: var(--secondary-font-Krub);
+  background: linear-gradient(
+    to right,
+    rgba(3, 45, 95, 1),
+    rgba(9, 18, 66, 0.2)
+  ),
+  url(../img/contact/contact-hero-img.png) no-repeat;
+  width: 100%;
+  min-height: 60vh;
+  background-position: center;
+  background-size: cover;
+  margin-top: -75px !important;
+  
+}
+.herowrapper {
+  width: 60%;
+  height: 100%;
+}
+.heroFirstParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: clamp(5px, auto, 10px);
+  font-weight: var(--semibold);
+  color: var(--common-white);
+  background-color: rgba(21, 21, 92, 0.8);
+}
+.heroHeading h1 {
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: bold;
+  color: var(--common-white);
+  font-family: var(--primary-font-Rubik) !important;
+  line-height: 65px;
+}
+.heroSecondParagraph {
+  font-size: clamp(15px, 2vw, 15px);
+  color: var(--common-white);
+  margin: 20px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .herowrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .heroHeading h1 {
+    line-height: 50px;
+    margin: 10px 0px;
+  }
+  .heroSecondParagraph {
+    margin: 10px 0px;
+  }
+  #hero {
+    margin-top: -100px !important;
+  }
+}
+/* end hero section  */
+
+/* START FORM SECTION  */
+#form {
+  width: 100%;
+  min-height: 40vh;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 50px ;
+}
+.formWrapper{
+  padding: 40px 50px !important;
+  background-color: var(--secondary-navy);
+  width: 100%;
+  min-height: 40vh;
+  border-radius: 4px ;
+}
+
+
+.formParagraphOne {
+  background-color: #e8e8e8;
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 10px;
+  font-family: var(--primary-font-Rubik);
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 14px ;
+}
+.formHeadingText h2 {
+  font-family: var(--primary-font-Rubik);
+  font-size: 30px;
+  font-weight: var(--semibold);
+  color: var(--common-white);
+}
+.formP2 {
+  font-family: var(--secondary-font-Krub);
+  font-size: 14px;
+  color: var(--common-white);
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.fromIcon i {
+  background: rgb(18, 33, 106);
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  color: var(--primary-color-1);
+  margin-right: 10px;
+  transition: 0.5s ease-in-out;
+  border: solid 2px rgb(42, 59, 147);
+}
+
+.fromIcon i:hover {
+  background-color: var(--primary-color-1);
+  color: var(--common-black);
+}
+.fromIcon a {
+  text-decoration: none !important;
+  font-family: var(--primary-font-Rubik);
+  font-weight: 400;
+  color: var(--common-white);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-size: 14px ;
+}
+.fromIcon a:hover {
+  color: var(--primary-color-1);
+}
+.fromIcon {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.contactformIconWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.formHeadingText {
+  text-align: center !important;
+  margin-bottom: 20px ;
+}
+textarea {
+  width: 100%;
+  border-radius: 2px;
+  background-color: transparent !important;
+  border: solid 2px rgb(28, 39, 97) !important;
+  color: var(--common-white) !important;
+  padding: 20px;
+}
+form input:focus {
+  box-shadow: 1px 1px 10px rgb(14, 22, 64) !important;
+  outline: 1px solid rgb(255, 255, 255) !important;
+  color: var(--common-white) !important;
+}
+
+textarea:focus {
+  box-shadow: 1px 1px 10px rgb(14, 22, 64) !important;
+  outline: 1px solid rgb(255, 255, 255) !important;
+  color: var(--common-white);
+}
+
+textarea::placeholder {
+  color: var(--common-white) !important;
+  font-family: var(--secondary-font-Krub) !important;
+}
+form input::placeholder {
+  font-size: 16px !important;
+  color: var(--common-white) !important;
+ 
+}
+form input {
+  border-radius: 2px !important;
+  background-color: transparent !important;
+  border: solid 2px rgb(28, 39, 97) !important;
+  color: var(--common-white) !important;
+  font-family: var(--secondary-font-Krub) !important;
+}
+
+.formInput::placeholder{
+  font-family: var(--secondary-font-Krub) !important;
+}
+
+.formBtn button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: linear-gradient(to right, #ffb629, #ffda56);
+  font-family: var(--secondary-font-Krub);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 2px;
+  border: none;
+  transition: 0.5s ease-in-out;
+  border: 0.5px solid var(--primary-color-1);
+}
+.formBtn button:hover {
+  background: var(--secondary-navy) !important;
+  color: var(--primary-color-1);
+  border: 0.5px solid var(--primary-color-1);
+}
+  
+  .formBtn {
+    text-align: center;
+  }
+
+/* add  */
+
+.formColWrapper {
+  display:flex ;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width:576px) {
+  .formWrapper{
+    padding: 20px 20px !important;
+    border-radius: 4px ;
+  }
+}
+/* END FORM SECTION  */
+
+/* START FAQ SECITON */
+#frequent{
+  width: 100%;
+  min-height:60vh;
+  background: #e2e2e2;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: 50px 0px ;
+  overflow: hidden !important;
+}
+
+
+.frequentFirstParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: var(--semibold);
+  color: var(--common-black);
+  background-color: rgba(226, 226, 226, 0.8);
+  font-family: var(--secondary-font-Krub);
+}
+.frequentHeading h1 {
+  font-size: 30px;
+  font-weight: bold !important;
+  color: var(--common-black);
+  font-family: var(--primary-font-Rubik) !important;
+  line-height: 45px;
+}
+.FAQaccordion{
+  background: rgba(226, 226, 226, 0.8) ;
+}
+.FAQaccordionbody{
+  background-color: rgba(226, 226, 226, 0.8);
+}
+.accordion-button:not(.collapsed) {
+background-color: var(--primary-color-1) !important;
+border: none !important;
+outline: none !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+  border: none;
+  outline: none;
+}
+.accordion-button{
+  font-family: var(--secondary-font-Krub) !important;
+  font-size: 16px  !important;
+  font-weight: 500;
+}
+
+/* start second column  */
+.secondImgWrapper img{
+ margin-left: 250px ;
+}
+
+.frequentSecondParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: var(--semibold);
+  color: var(--common-white);
+  background-color: rgba(52, 47, 122, 0.8);
+  font-family: var(--secondary-font-Krub);
+}
+.frequentSecondHeading h1 {
+  color: var(--common-white);
+font-family: var(--primary-font-Rubik);
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+}
+.listLogo a {
+  text-decoration: none;
+  font-family: var(--secondary-font-Krub);
+  font-weight: 500;
+  color: var(--common-white);
+  transition: .3s ease-in-out;
+}
+.listLogo a:hover {
+  color: var(--primary-color-1);
+}
+.secondColumnBtn button {
+  width: 150px !important;
+  height: 50px !important;
+}
+.secondColumnBtn span {
+  font-size: 14px !important;
+}
+.secondColumnWrapper{
+  position: relative;
+}
+.frequentSecondHeadingWrapper{
+  display: flex;
+  align-items: start;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 50px ;
+  gap: 5px ;
+  width: 400px ;
+  background: #091242;
+  border-radius: 4px ;
+  position: absolute;
+  top: 22%;
+  left: 40px;
+}
+.secondImgWrapper img{
+  width: 100%;
+  height: auto;
+}
+
+.copyHeadingWrapper{
+  background: #091242;
+  padding: 25px 15px ;
+  display: none;
+ 
+}
+.customizeUniqBtnWrapper{
+  display: flex;
+  align-items: start;
+}
+
+
+@media screen and (max-width:1200px) {
+  .secondImgWrapper img{
+    margin: 0px ;
+    width: 100% !important;
+    height: 100%;
+   }
+   .secondColumnWrapper{
+    margin-top: 40px ;
+   }
+
+   .frequentSecondHeadingWrapper{
+    display: none;
+   }
+   .secondColumn{
+    width: 100%;
+   }
+   .copyHeadingWrapper{
+    display: block;
+    margin-top: 20px;
+   }
+
+   .frequentHeadingWrapper{
+    text-align: center;
+   }
+   
+}
+
+/* END FAQ SECITON */
+
+/* START NORTO SECITON  */
+#Norto{
+    width: 100%;
+    min-height: 30vh;
+    background-color: var(--common-white);
+    margin-bottom: 30px ;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0px 0px  0px;
+  flex-wrap: wrap;
+}
+/* start copy */
+
+.formImgOne {
+  background: linear-gradient(
+      to top,
+      rgba(24, 27, 69, 0.8) 2%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../img/form-crain-img.jpg) no-repeat;
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.formImgTwo {
+
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+.formImgThree {
+
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+.formImgFour {
+  width:270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+
+.formImgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .formImgOne {
+    background: linear-gradient(
+        to top,
+        rgba(24, 27, 69, 0.4) 2%,
+        rgba(0, 0, 0, 0.1)
+      ),
+      url(../img/form-crain-img.jpg) no-repeat;
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+    
+  }
+  .formImgTwo {
+    
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+  }
+  .formImgThree {
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+  }
+
+  .formImgFour {
+    width: 100%;
+    margin: 20px 5px !important;
+    background-position: center;
+  }
+
+  .formBtn {
+    text-align: center;
+  }
+}
+
+/* end copy */
+
+
+/* END NORTO SECITON  */
+

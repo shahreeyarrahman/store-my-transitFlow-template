@@ -1,0 +1,301 @@
+/* Font link here  */
+
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* variabls */
+:root {
+  /* color  */
+  --common-white: #ffffff;
+  --common-black: #000000;
+  --primary-color-1: #ffbe34;
+  --primary-color-2: #091242;
+  --secondary-2: #f4f4f4;
+  --secondary-navy: rgba(9, 18, 66, 1);
+  --Heading-Font-color: #1c1f35;
+  --Paragraph-Font-color: #666c89;
+  --Gradiant-color: #ffb629, #ffda56, #ffd7a6;
+  --icon-bg-color: #273270;
+  --icon-border: 1px solid #4a57a1;
+  --shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+
+  /* font size  */
+  --heading-font-size-1: clamp(50px, 4vw, 65px);
+  --heading-font-size-2: clamp(20px, 4vw, 65px);
+  --heading-font-size-3: clamp(15px, 3vw, 50px);
+  --paragraph-font-size: clamp(10px, 2vw, 16px);
+  --semibold: 500;
+  --bold: 700;
+
+  /* font family  */
+  --primary-font-Rubik: "Rubik", sans-serif;
+  --secondary-font-Krub: "Krub", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* start hero section  */
+#hero {
+  
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-family: var(--secondary-font-Krub);
+  background: linear-gradient(
+    to right,
+    rgba(3, 45, 95, 1),
+    rgba(9, 18, 66, 0.2)
+  ),
+  url(../img/pricing/Pricing-hero-img.png) no-repeat;
+  width: 100%;
+  min-height: 60vh;
+  background-position: center;
+  background-size: cover;
+  margin-top: -75px !important;
+  
+}
+.herowrapper {
+  width: 60%;
+  height: 100%;
+}
+.heroFirstParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: clamp(5px, auto, 10px);
+  font-weight: var(--semibold);
+  color: var(--common-white);
+  background-color: rgba(21, 21, 92, 0.8);
+}
+.heroHeading h1 {
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: bold;
+  color: var(--common-white);
+  font-family: var(--primary-font-Rubik) !important;
+  line-height: 65px;
+}
+.heroSecondParagraph {
+  font-size: clamp(15px, 2vw, 15px);
+  color: var(--common-white);
+  margin: 20px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .herowrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .heroHeading h1 {
+    line-height: 50px;
+    margin: 10px 0px;
+  }
+  .heroSecondParagraph {
+    margin: 10px 0px;
+  }
+  #hero {
+    margin-top: -100px !important;
+  }
+}
+/* end hero section  */
+
+
+
+
+/* START ABOUT SLIDER SECITON */
+#Slider{
+    width: 100%;
+    height:400px ;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+/* END ABOUT SLIDER SECITON */
+
+/* START ABOUT PRICING SECITON */
+#Pricing{
+    width: 100%;
+    min-height:110vh ;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.PricingHeadingWrapper{
+    text-align: center;
+}
+
+.PricingFirstParagraph {
+    display: inline-block;
+    border-left: 6px solid var(--primary-color-1);
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: var(--semibold);
+    color: var(--common-black);
+    background-color: rgba(226, 226, 226, 0.8);
+    font-family: var(--secondary-font-Krub);
+  }
+  .PricingHeading h1 {
+    font-size: 30px;
+    font-weight: bold !important;
+    color: var(--common-black);
+    font-family: var(--primary-font-Rubik) !important;
+    line-height: 45px;
+  }
+
+  .PricingColWrapper{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px ;
+    text-align: center;
+  }
+  .pricingTextOne{
+    color: #1C1F35;
+text-align: center;
+font-family: var(--primary-font-Rubik);
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+.pricingTextTwo{
+    margin: 50px 0px !important;
+}
+  .pricingTextTwo span{
+    color: #1C1F35;
+text-align: center;
+font-family: var(--primary-font-Rubik);
+font-size: clamp(60px,4vw,85px);
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+  .pricingTextTwo sub{
+    color: #1C1F35;
+font-family: var(--primary-font-Rubik);
+font-size: clamp(15px,2vw,20px);
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  .pricingContent ul li {
+    list-style-type: none;
+  }
+  .pricingContent ul {
+    padding: 0;
+    margin: 10px 0px ;
+  }
+  .pricingContent ul li a{
+    text-decoration: none;
+    font-size: 16px ;
+    font-family: var(--secondary-font-Krub);
+    font-weight: 500;
+    color: var(--common-black);
+    padding: 15px 20px ;
+    width: 100% ;
+    display: block;
+    border-top: .5px solid rgba(218, 218, 218, 0.5);
+    border-bottom: .5px solid rgba(218, 218, 218, 0.5);
+  }
+  .pricingContent ul li a:hover{
+    color: var(--primary-color-1);
+  }
+  .PricingColWrapper{
+    background: #F4F4F4;
+    margin: 0px 20px ;
+    cursor: pointer;
+    border-radius: 4px ;
+    transition: .3s ease-in-out;
+  }
+  .PricingColWrapper:hover{
+    background: #091242;
+    
+  }
+
+ /* Basic */
+ .PricingColWrapper:hover ul li a{
+  color: var(--common-white);
+}
+ .PricingColWrapper:hover p{
+  color: var(--common-white);
+}
+ .PricingColWrapper:hover span{
+  color: var(--common-white);
+}
+ .PricingColWrapper:hover sub{
+  color: var(--common-white);
+}
+.pricingContent ul li a:hover{
+  color: var(--primary-color-1) !important;
+}
+
+.PricingColWrapper:hover .basicBtnColor button{
+  background-color: var(--primary-color-1) !important;
+}
+
+
+/* standard  */
+  .Standard{
+  background: #091242;
+}
+.Standard p{
+    color: white !important;
+}
+.Standard .pricingTextTwo span{
+    color: white !important;
+} 
+.Standard .pricingTextTwo sub{
+    color: white !important;
+} 
+.Standard .standardText {
+    color: white !important;
+} 
+.Standard .standardText:hover {
+    color: var(--primary-color-1) !important;
+} 
+.standardbtnColor button{
+  background-color: var(--primary-color-1) !important;
+}
+
+.standardBtn button::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ffffff !important;
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  transition: all 0.2s ease-in-out;
+}
+.standardBtn button span {
+  color: var(--common-black) !important;
+}
+
+.UniqSecondaryColorBtn {
+  margin-top: 30px ;
+}
+
+@media screen and (max-width:576px) {
+  .PricingColWrapper{
+    margin: 0px 0px ;
+  }
+}
+
+
+/* END ABOUT PRICING SECITON */
+

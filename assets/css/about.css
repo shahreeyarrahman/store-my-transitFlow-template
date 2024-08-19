@@ -1,0 +1,879 @@
+/* Font link here  */
+
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* variabls */
+:root {
+  /* color  */
+  --common-white: #ffffff;
+  --common-black: #000000;
+  --primary-color-1: #ffbe34;
+  --primary-color-2: #091242;
+  --secondary-2: #f4f4f4;
+  --secondary-navy: rgba(9, 18, 66, 1);
+  --Heading-Font-color: #1c1f35;
+  --Paragraph-Font-color: #666c89;
+  --Gradiant-color: #ffb629, #ffda56, #ffd7a6;
+  --icon-bg-color: #273270;
+  --icon-border: 1px solid #4a57a1;
+  --shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+
+  /* font size  */
+  --heading-font-size-1: clamp(50px, 4vw, 65px);
+  --heading-font-size-2: clamp(20px, 4vw, 65px);
+  --heading-font-size-3: clamp(15px, 3vw, 50px);
+  --paragraph-font-size: clamp(10px, 2vw, 16px);
+  --semibold: 500;
+  --bold: 700;
+
+  /* font family  */
+  --primary-font-Rubik: "Rubik", sans-serif;
+  --secondary-font-Krub: "Krub", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* start hero section  */
+#hero {
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-family: var(--secondary-font-Krub);
+  background: linear-gradient(
+      to right,
+      rgba(3, 45, 95, 1),
+      rgba(9, 18, 66, 0.2)
+    ),
+    url(../img/about/about-hero-img.png) no-repeat;
+  width: 100%;
+  min-height: 60vh;
+  background-position: center;
+  background-size: cover;
+  margin-top: -75px !important;
+  
+}
+.herowrapper {
+  width: 60%;
+  height: 100%;
+}
+.heroFirstParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: clamp(5px, auto, 10px);
+  font-weight: var(--semibold);
+  color: var(--common-white);
+  background-color: rgba(21, 21, 92, 0.8);
+}
+.heroHeading h1 {
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: bold;
+  color: var(--common-white);
+  font-family: var(--primary-font-Rubik) !important;
+  line-height: 65px;
+}
+.heroSecondParagraph {
+  font-size: clamp(15px, 2vw, 15px);
+  color: var(--common-white);
+  margin: 20px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .herowrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .heroHeading h1 {
+    line-height: 50px;
+    margin: 10px 0px;
+  }
+  .heroSecondParagraph {
+    margin: 10px 0px;
+  }
+  #hero {
+    margin-top: -100px !important;
+  }
+}
+/* end hero section  */
+
+
+
+
+/* START ABOUT COMPANY SECITON   */
+
+#Company {
+    width: 100%;
+    min-height: 500px;
+    margin-bottom: 50px ;
+  }
+  .globalWrapper {
+    padding: 70px;
+    position: relative;
+    background-color: var(--common-white);
+  }
+  .globalParagraph {
+    background-color: #e8e8e8;
+    display: inline-block;
+    border-left: 6px solid var(--primary-color-1);
+    padding: 5px 10px;
+    font-family: var(--primary-font-Rubik);
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .globalContent h2 {
+    font-family: var(--primary-font-Rubik);
+    font-size: 25px;
+    font-weight: var(--semibold);
+    margin-bottom: 20px;
+  }
+  .globalP2 {
+    font-family: var(--secondary-font-Krub);
+    font-size: 14px;
+    color: #5b617e;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .globalIconParent{
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(to right, var(--Gradiant-color)) ;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+   
+  }
+  .globalDelivaryIcon{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+  }
+  
+  .globalDelivaryIcon a {
+    text-decoration: none !important;
+    font-size: 18px;
+    font-family: var(--primary-font-Rubik);
+    font-weight: 400;
+    color: var(--common-black);
+    cursor: pointer;
+  }
+  .globalWomenImg img {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 30px solid var(--common-white);
+    max-width: 400px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .globalWomenImg img {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 40%;
+      border: 30px solid var(--common-white);
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .globalWrapper {
+      padding: 20px;
+    }
+    .globalWomenImg img {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 50%;
+      border: 20px solid var(--common-white);
+      max-width: 250px;
+    }
+  }
+  @media screen and (max-width:576px) {
+    .globalWrapper {
+      padding: 20px;
+    }
+    .globalWomenImg img {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 50%;
+      border: 15px solid var(--common-white);
+      max-width: 120px;
+    }
+  }
+  
+  /* add  */
+  .companyFirstColumn{
+    position: relative;
+  }
+  .companySecondColumn{
+    padding: 10px 150px 0px 40px  ;
+  }
+  .companyGroupBtn{
+    margin-bottom: 20px ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    gap: 20px ;
+  }
+  .companyGroupBtn a{
+    text-decoration: none;
+    transition: .2s ease-in-out;
+  }
+  .companyGroupBtn a:hover{
+  background-color: var(--primary-color-1) !important;
+  color: white !important;
+  }
+  .companyGroupBtn .GpBtnOne{
+    width: 200px;
+    background-color: var(--primary-color-1);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--secondary-font-Krub);
+    color: var(--common-white);
+    cursor: pointer;
+  }
+  .companyGroupBtn .GpBtnOne a{
+    color: var(--common-white);
+    padding: 15px 30px ;
+    display: block;
+  }
+  .companyGroupBtn .GpBtnTwo{
+    width: 200px ;
+    background-color: #e9e9e9;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--secondary-font-Krub);
+    color: var(--common-black);
+    cursor: pointer;
+  }
+  .companyGroupBtn .GpBtnTwo a{ 
+    color: var(--common-black);
+    padding: 15px 30px ;
+    display: block;
+  }
+
+  .companyUniqBtn{
+    display: flex; 
+  }
+
+  @media screen and (max-width:992px) {
+    .companySecondColumn{
+        padding: 0px  ;
+      }
+  }
+
+  @media screen and (max-width:768px) {
+    .companySecondColumn{
+        padding: 10px;
+      }
+
+      .companyFirstColumn{
+        padding: 10px;
+      }
+      .globalWrapper{
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+  }
+  @media screen and (max-width:500px) {
+    .GpBtnOne,
+    .GpBtnTwo {
+        width: 100% !important;
+    }
+    .companyUniqBtn{
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+    }
+  }
+
+  /* add  */
+/* END ABOUT COMPANY SECITON  */
+
+/* START SERVICES SECITON */
+#service{
+    width: 100%;
+    min-height: 100vh;
+    background: #F4F4F4;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+.serviceHeadingWrapper{
+    text-align: center;
+}
+
+.serviceFirstParagraph {
+    display: inline-block;
+    border-left: 6px solid var(--primary-color-1);
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: var(--semibold);
+    color: var(--common-black);
+    background-color: rgba(226, 226, 226, 0.8);
+    font-family: var(--secondary-font-Krub);
+  }
+  .serviceHeading h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--common-black);
+    font-family: var(--primary-font-Rubik) !important;
+    line-height: 45px;
+    margin-bottom:30px ;
+  }
+
+  .serviceCard img {
+    width: 60px !important;
+    margin: 10px 20px ;
+  }
+ 
+
+  .serviceCard h4 {
+    color: #1C1F35;
+font-family: Rubik;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  .serviceCard p{
+    color: #666C89;
+    font-family: Krub;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 151.523%;
+  }
+.serviceCard{
+    background-color: #F4F4F4;
+    cursor: pointer;
+    border: none;
+    transition: .3s ease-in-out;
+    padding: 10px ;
+    height: 230px ;
+}
+  
+.serviceCard:hover{
+    box-shadow:  5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+  
+  .serviceUniqBtn{
+    display: flex; 
+    margin-top: 60px;
+    justify-content: center;
+  } 
+  
+  @media screen and (max-width:992px) {
+    .serviceCardWrapper{
+        width: 100% !important;
+    }
+    .serviceCard{
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        align-content: center !important;
+        padding: 20px 0px ;
+        
+    }
+    .serviceCard h4, .serviceCardTextP {
+        text-align: center;
+    }
+    .serviceUniqBtn{
+        margin-top: 40px;
+    }
+    .card-body{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+   
+  }
+
+/* END SERVICES SECITON */
+
+
+/* START ABOUT PRICING SECITON */
+#Pricing{
+    width: 100%;
+    min-height:110vh ;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.PricingHeadingWrapper{
+    text-align: center;
+}
+
+.PricingFirstParagraph {
+    display: inline-block;
+    border-left: 6px solid var(--primary-color-1);
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: var(--semibold);
+    color: var(--common-black);
+    background-color: rgba(226, 226, 226, 0.8);
+    font-family: var(--secondary-font-Krub);
+  }
+  .PricingHeading h1 {
+    font-size: 30px;
+    font-weight: bold !important;
+    color: var(--common-black);
+    font-family: var(--primary-font-Rubik) !important;
+    line-height: 45px;
+  }
+
+  .PricingColWrapper{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px ;
+    text-align: center;
+  }
+  .pricingTextOne{
+    color: #1C1F35;
+text-align: center;
+font-family: var(--primary-font-Rubik);
+font-size: 30px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+.pricingTextTwo{
+    margin: 50px 0px !important;
+}
+  .pricingTextTwo span{
+    color: #1C1F35;
+text-align: center;
+font-family: var(--primary-font-Rubik);
+font-size: clamp(60px,4vw,85px);
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+  }
+  .pricingTextTwo sub{
+    color: #1C1F35;
+font-family: var(--primary-font-Rubik);
+font-size: clamp(15px,2vw,20px);
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  .pricingContent ul li {
+    list-style-type: none;
+  }
+  .pricingContent ul {
+    padding: 0;
+    margin: 10px 0px ;
+  }
+  .pricingContent ul li a{
+    text-decoration: none;
+    font-size: 16px ;
+    font-family: var(--secondary-font-Krub);
+    font-weight: 500;
+    color: var(--common-black);
+    padding: 15px 20px ;
+    width: 100% ;
+    display: block;
+    border-top: .5px solid rgba(218, 218, 218, 0.5);
+    border-bottom: .5px solid rgba(218, 218, 218, 0.5);
+  }
+  .pricingContent ul li a:hover{
+    color: var(--primary-color-1);
+  }
+  .PricingColWrapper{
+    background: #F4F4F4;
+    margin: 0px 20px ;
+    cursor: pointer;
+    border-radius: 4px ;
+    transition: .3s ease-in-out;
+  }
+  .PricingColWrapper:hover{
+    background: #091242;
+    
+  }
+
+ /* Basic */
+ .PricingColWrapper:hover ul li a{
+  color: var(--common-white);
+}
+ .PricingColWrapper:hover p{
+  color: var(--common-white);
+}
+ .PricingColWrapper:hover span{
+  color: var(--common-white);
+}
+ .PricingColWrapper:hover sub{
+  color: var(--common-white);
+}
+.pricingContent ul li a:hover{
+  color: var(--primary-color-1) !important;
+}
+
+.PricingColWrapper:hover .basicBtnColor button{
+  background-color: var(--primary-color-1) !important;
+}
+
+
+/* standard  */
+  .Standard{
+  background: #091242;
+}
+.Standard p{
+    color: white !important;
+}
+.Standard .pricingTextTwo span{
+    color: white !important;
+} 
+.Standard .pricingTextTwo sub{
+    color: white !important;
+} 
+.Standard .standardText {
+    color: white !important;
+} 
+.Standard .standardText:hover {
+    color: var(--primary-color-1) !important;
+} 
+.standardbtnColor button{
+  background-color: var(--primary-color-1) !important;
+}
+
+.standardBtn button::before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ffffff !important;
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  transition: all 0.2s ease-in-out;
+}
+.standardBtn button span {
+  color: var(--common-black) !important;
+}
+
+@media screen and (max-width:576px) {
+  .PricingColWrapper{
+    margin: 0px 0px ;
+  }
+}
+
+/* END ABOUT PRICING SECITON */
+
+/* START FAQ SECITON */
+#frequent{
+  width: 100%;
+  min-height:60vh;
+  background: #e2e2e2;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 30px ;
+  overflow: hidden ;
+}
+
+
+.frequentFirstParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: var(--semibold);
+  color: var(--common-black);
+  background-color: rgba(226, 226, 226, 0.8);
+  font-family: var(--secondary-font-Krub);
+}
+.frequentHeading h1 {
+  font-size: 30px;
+  font-weight: bold !important;
+  color: var(--common-black);
+  font-family: var(--primary-font-Rubik) !important;
+  line-height: 45px;
+}
+.FAQaccordion{
+  background: rgba(226, 226, 226, 0.8) ;
+}
+.FAQaccordionbody{
+  background-color: rgba(226, 226, 226, 0.8);
+}
+.accordion-button:not(.collapsed) {
+background-color: var(--primary-color-1) !important;
+border: none !important;
+outline: none !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+  border: none;
+  outline: none;
+}
+.accordion-button{
+  font-family: var(--secondary-font-Krub) !important;
+  font-size: 16px  !important;
+  font-weight: 500;
+}
+
+/* start second column  */
+.secondImgWrapper img{
+ margin-left: 250px ;
+}
+
+.frequentSecondParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: 14px;
+  font-weight: var(--semibold);
+  color: var(--common-white);
+  background-color: rgba(52, 47, 122, 0.8);
+  font-family: var(--secondary-font-Krub);
+}
+.frequentSecondHeading h1 {
+  color: var(--common-white);
+font-family: var(--primary-font-Rubik);
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+}
+.listLogo a {
+  text-decoration: none;
+  font-family: var(--secondary-font-Krub);
+  font-weight: 500;
+  color: var(--common-white);
+  transition: .3s ease-in-out;
+}
+.listLogo a:hover {
+  color: var(--primary-color-1);
+}
+.secondColumnBtn button {
+  width: 150px !important;
+  height: 50px !important;
+}
+.secondColumnBtn span {
+  font-size: 14px !important;
+}
+.secondColumnWrapper{
+  position: relative;
+}
+.frequentSecondHeadingWrapper{
+  display: flex;
+  align-items: start;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 50px ;
+  gap: 5px ;
+  width: 400px ;
+  background: #091242;
+  border-radius: 4px ;
+  position: absolute;
+  top: 22%;
+  left: 40px;
+}
+.secondImgWrapper img{
+  width: 100%;
+  height: auto;
+}
+
+.copyHeadingWrapper{
+  background: #091242;
+  padding: 25px 15px ;
+  display: none;
+ 
+}
+.customizeUniqBtnWrapper{
+  display: flex;
+  align-items: start;
+}
+
+
+@media screen and (max-width:1200px) {
+  .secondImgWrapper img{
+    margin: 0px ;
+    width: 100% !important;
+    height: 100%;
+   }
+   .secondColumnWrapper{
+    margin-top: 40px ;
+   }
+
+   .frequentSecondHeadingWrapper{
+    display: none;
+   }
+   .secondColumn{
+    width: 100%;
+   }
+   .copyHeadingWrapper{
+    display: block;
+    margin-top: 20px;
+   }
+
+   .frequentHeadingWrapper{
+    text-align: center;
+   }
+   
+}
+
+/* END FAQ SECITON */
+
+/* START NORTO SECITON  */
+#Norto{
+    width: 100%;
+    min-height: 40vh;
+    background-color: var(--common-white);
+    margin-bottom: 30px ;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+/* start copy */
+
+.formImgOne {
+  background: linear-gradient(
+      to top,
+      rgba(24, 27, 69, 0.8) 2%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../img/form-crain-img.jpg) no-repeat;
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.formImgTwo {
+
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+.formImgThree {
+
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+.formImgFour {
+  width:270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+
+.formImgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .formImgOne {
+    background: linear-gradient(
+        to top,
+        rgba(24, 27, 69, 0.4) 2%,
+        rgba(0, 0, 0, 0.1)
+      ),
+      url(../img/form-crain-img.jpg) no-repeat;
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+    
+  }
+  .formImgTwo {
+    
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+  }
+  .formImgThree {
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+  }
+
+  .formImgFour {
+    width: 100%;
+    margin: 20px 5px !important;
+    background-position: center;
+  }
+
+  .formBtn {
+    text-align: center;
+  }
+}
+
+/* end copy */
+
+
+/* END NORTO SECITON  */
+
+/* add  */
+.serviceCard .serviceAirbusImg{
+  width: 83px !important;
+  display: block !important;
+}
+
+.sliderParent {
+  margin-bottom: 0px !important;
+}

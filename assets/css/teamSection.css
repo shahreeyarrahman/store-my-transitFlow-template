@@ -1,0 +1,469 @@
+/* Font link here  */
+
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* variabls */
+:root {
+  /* color  */
+  --common-white: #ffffff;
+  --common-black: #000000;
+  --primary-color-1: #ffbe34;
+  --primary-color-2: #091242;
+  --secondary-2: #f4f4f4;
+  --secondary-navy: rgba(9, 18, 66, 1);
+  --Heading-Font-color: #1c1f35;
+  --Paragraph-Font-color: #666c89;
+  --Gradiant-color: #ffb629, #ffda56, #ffd7a6;
+  --icon-bg-color: #273270;
+  --icon-border: 1px solid #4a57a1;
+  --shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+
+  /* font size  */
+  --heading-font-size-1: clamp(50px, 4vw, 65px);
+  --heading-font-size-2: clamp(20px, 4vw, 65px);
+  --heading-font-size-3: clamp(15px, 3vw, 50px);
+  --paragraph-font-size: clamp(10px, 2vw, 16px);
+  --semibold: 500;
+  --bold: 700;
+
+  /* font family  */
+  --primary-font-Rubik: "Rubik", sans-serif;
+  --secondary-font-Krub: "Krub", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* start hero section  */
+#hero {
+  background: linear-gradient(
+    to right,
+    rgba(3, 45, 95, 1),
+    rgba(9, 18, 66, 0.2)
+  ),
+  url(../img/team/team-section-hero-img.png) no-repeat;
+width: 100%;
+min-height: 60vh !important;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  font-family: var(--secondary-font-Krub);
+  background-position: center;
+  background-size: cover;
+  margin-top: -75px !important;
+  
+}
+.herowrapper {
+  width: 60%;
+  height: 100%;
+}
+.heroFirstParagraph {
+  display: inline-block;
+  border-left: 6px solid var(--primary-color-1);
+  padding: 5px 15px;
+  font-size: clamp(5px, auto, 10px);
+  font-weight: var(--semibold);
+  color: var(--common-white);
+  background-color: rgba(21, 21, 92, 0.8);
+}
+.heroHeading h1 {
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: bold;
+  color: var(--common-white);
+  font-family: var(--primary-font-Rubik) !important;
+  line-height: 65px;
+}
+.heroSecondParagraph {
+  font-size: clamp(15px, 2vw, 15px);
+  color: var(--common-white);
+  margin: 20px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .herowrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .heroHeading h1 {
+    line-height: 50px;
+    margin: 10px 0px;
+  }
+  .heroSecondParagraph {
+    margin: 10px 0px;
+  }
+  #hero {
+    margin-top: -100px !important;
+  }
+}
+/* end hero section  */
+
+
+
+/* START ABOUT COMPANY SECITON   */
+
+#Company {
+    width: 100%;
+    min-height: 50vh;
+    margin-bottom: 50px;
+  }
+  .globalWrapper {
+    padding: 10px 70px;
+    position: relative;
+    background-color: var(--common-white);
+  }
+  .globalParagraph {
+    background-color: #e8e8e8;
+    display: inline-block;
+    border-left: 6px solid var(--primary-color-1);
+    padding: 5px 10px;
+    font-family: var(--primary-font-Rubik);
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .globalContent h2 {
+    font-family: var(--primary-font-Rubik);
+    font-size: 25px;
+    font-weight: var(--semibold);
+    margin-bottom: 20px;
+  }
+  .globalP2 {
+    font-family: var(--secondary-font-Krub);
+    font-size: 14px;
+    color: #5b617e;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .globalIconParent{
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(to right, var(--Gradiant-color)) ;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+   
+  }
+  .globalDelivaryIcon{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+  }
+  
+  .globalDelivaryIcon a {
+    text-decoration: none !important;
+    font-size: 18px;
+    font-family: var(--primary-font-Rubik);
+    font-weight: 400;
+    color: var(--common-black);
+    cursor: pointer;
+  }
+  .globalWomenImg img {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border: 30px solid var(--common-white);
+    max-width: 400px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .globalWomenImg img {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 40%;
+      border: 30px solid var(--common-white);
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .globalWrapper {
+      padding: 20px;
+    }
+    .globalWomenImg img {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 50%;
+      border: 20px solid var(--common-white);
+      max-width: 250px;
+    }
+  }
+  @media screen and (max-width:576px) {
+    .globalWrapper {
+      padding: 20px;
+    }
+    .globalWomenImg img {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 50%;
+      border: 15px solid var(--common-white);
+      max-width: 120px;
+    }
+  }
+  
+  /* add  */
+  .companyFirstColumn{
+    position: relative;
+  }
+  .companySecondColumn{
+    padding: 10px 150px 0px 40px ;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+  }
+  
+
+  @media screen and (max-width:992px) {
+    .companySecondColumn{
+        padding: 0px  ;
+      }
+  }
+
+  @media screen and (max-width:768px) {
+    .companySecondColumn{
+        padding: 10px;
+      }
+
+      .companyFirstColumn{
+        padding: 10px;
+      }
+      .globalWrapper{
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+  }
+  @media screen and (max-width:500px) {
+    .GpBtnOne,
+    .GpBtnTwo {
+        width: 100% !important;
+    }
+    .companyUniqBtn{
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+    }
+  }
+
+  /* add  */
+/* END ABOUT COMPANY SECITON  */
+
+
+
+/* START NORTO SECITON  */
+#Norto{
+    width: 100%;
+    min-height: 30vh;
+    background-color: var(--common-white);
+    margin-bottom: 30px ;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+/* start copy */
+
+.formImgOne {
+  background: linear-gradient(
+      to top,
+      rgba(24, 27, 69, 0.8) 2%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../img/form-crain-img.jpg) no-repeat;
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.formImgTwo {
+
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px ;
+}
+.formImgThree {
+
+  width: 270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+.formImgFour {
+  width:270px;
+  height: 220px;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgb(87, 87, 87);
+    margin: 20px 0px;
+}
+
+.formImgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .formImgOne {
+    background: linear-gradient(
+        to top,
+        rgba(24, 27, 69, 0.4) 2%,
+        rgba(0, 0, 0, 0.1)
+      ),
+      url(../img/form-crain-img.jpg) no-repeat;
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+    
+  }
+  .formImgTwo {
+    
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+  }
+  .formImgThree {
+    width: 100%;
+    margin: 20px 5px;
+    background-position: center;
+  }
+
+  .formImgFour {
+    width: 100%;
+    margin: 20px 5px !important;
+    background-position: center;
+  }
+
+  .formBtn {
+    text-align: center;
+  }
+}
+
+/* end copy */
+
+
+/* END NORTO SECITON  */
+
+/* card add  */
+
+
+.serviceCard img {
+  width: 60px !important;
+  margin: 10px 20px ;
+}
+
+
+.serviceCard h4 {
+  color: #1C1F35;
+font-family: var(--primary-font-Rubik);
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.serviceCard p{
+  color: #666C89;
+  font-family: var(--secondary-font-Krub);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 151.523%;
+}
+.serviceCard{
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+  transition: .3s ease-in-out;
+  padding: 10px ;
+  width: 100%;
+  height: 220px !important;
+}
+.teamResizeimg{
+  padding: 10px !important;
+  margin-bottom: 0px !important;
+  padding-top: 0px !important;
+}
+
+.serviceCard:hover{
+  box-shadow:  5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width:1200px) {
+  .serviceCardWrapper{
+      width: 100% !important;
+  }
+  .serviceCard{
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      align-content: center !important;
+      padding: 20px 0px ;
+      
+  }
+  .serviceCard h4, .serviceCardTextP {
+      text-align: center;
+  }
+ 
+  .card-body{
+      padding: 0 !important;
+      margin: 0 !important;
+  }
+  .globalContent{
+    text-align: center;
+  }
+  .companySecondColumn{
+    padding:10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+  }
+ 
+}
